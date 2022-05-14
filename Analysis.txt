@@ -1,0 +1,104 @@
+Worst-Case Big-O Notation
+In this analysis:
+    m = len(calls)
+    n = len(texts)
+==========================================
+
+** Task 0 **
+==========================================
+Selecting the first entry = O(1)
+Print the first entry = O(1)
+Selecting the last entry = O(1)
+Print the last entry = O(1)
+---------------
+-> Total = O(4) ~ O(1)
+
+** Task 1 **
+==========================================
+Defining the set = O(1)
+
+Reading each line from texts = O(n)
+Extracting both numbers from the line = O(2n)
+Updating the set with the two numbers = O(n)
+
+Reading each line from calls = O(m)
+Extracting both numbers from the line = O(2m)
+Updating the set with the two numbers = O(m)
+
+Getting the length of the set = O(1)
+Printing the response = O(1)
+---------------
+-> Total = O(4n + 4m + 3) ~ O(n + m)
+
+** Task 2 **
+==========================================
+Defining the default dictionary = O(1)
+
+Reading each line from the calls = O(m)
+Extracting both numbers from the line = O(2m)
+Incrementing both counter = O(2m)
+
+Getting the max key = O(m)
+Getting the max value = O(m)
+
+Printing the response = O(1)
+---------------
+-> Total = O(7m + 2) ~ O(m)
+
+** Task 3 - Part A **
+==========================================
+Creating the codes list = O(1)
+
+Reading each line from the calls = O(m)
+Selecting only the lines starting with (080) = O(m)
+Removing any spaces in the number = O(m)
+Evaluating each of the three if statements = O(3m)
+Appending code to the list = O(m)
+Extra processing for (***) number = O(3m)
+Extra processing for cell number = O(m)
+
+Eliminating duplicates = O(m)
+Sorting codes = O(mlog(m))
+Printing the response header = O(1)
+Joining the codes into single string = O(m)
+Printing the response = O(1)
+---------------
+-> Total = O(13m + mlog(m) + 3) ~ O(mlog(m))
+
+
+** Task 3 - Part B **
+==========================================
+Defining both counters = O(2)
+
+Reading each line from the calls = O(m)
+Selecting only the lines starting with (080) = O(m)
+Selecting the second number = O(m)
+Incrementing both counters = O(2m)
+Evaluating the if statement = O(m)
+
+Calculating the percentage = O(1)
+Printing the response = O(1)
+---------------
+-> Total = O(6m + 4) ~ O(m)
+
+** Task 4 **
+==========================================
+Reading each line from the calls = O(m)
+Extracting the first number = O(m)
+Creating the bad numbers set = O(m)
+
+Reading each line from the calls = O(m)
+Extracting the second number = O(m)
+Finding the set difference with the second numbers = O(m)
+
+Reading each line from the text = O(n)
+Extracting the first two numbers from the line = O(n)
+Making the list of both numbers = O(n)
+Finding the set difference with the list of numbers = O(m)
+
+Printing the response header = O(1)
+Sorting the numbers = O(mlog(m))
+Joining the numbers into single string = O(m)
+Printing the response = O(1)
+---------------
+-> Total = O(8m + mlog(m) + 3n + 2) ~ O(mlog(m))
